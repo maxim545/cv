@@ -23,7 +23,6 @@
   box-shadow: 0px 0px 52px 1px $shadow;
 }
 
-/* HEADER */
 .header {
   position: relative;
 }
@@ -104,7 +103,7 @@
     height: 190px;
     border-radius: 50%;
     border: 4px solid $primary;
-    background-color: #999;
+    background-color: $light;
   }
 
   &__title {
@@ -171,7 +170,6 @@
 }
 
 
-/* SECTION SKILL */
 
 .skills {
   &__list {
@@ -189,7 +187,6 @@
 }
 
 
-/* SECTION EDUCATION */
 .education {
   &__items {
     font-size: 16px;
@@ -208,7 +205,6 @@
 }
 
 
-/* SECTION LANGUAGES */
 .languages {
   &__content {
     font-size: 17px;
@@ -225,7 +221,6 @@
 }
 
 
-/* SECTION LANGUAGES */
 .footer {
   padding-top: 20px;
 
@@ -253,6 +248,74 @@
 }
 
 
+.slider {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+
+  &__images {
+    width:  100%;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  &__item {
+    display: none;
+  }
+
+  &__descr {
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    background-color: $shadow;
+  }
+
+  &__link {
+    color: $white;
+    &:hover {
+      color: $dark-hover;
+    }
+  }
+  
+
+  &__next-btn {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  &__prev-btn, &__next-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  &__prev-btn, &__next-btn {
+    background-color: $shadow;
+  }
+
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
 
 
 @import './assets/styles/media.scss';

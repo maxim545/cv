@@ -40,6 +40,6 @@
     }
 
     .shadow.active {
-        box-shadow: 0 0 0 9999px rgba(41, 41, 41, 0.6);
+        box-shadow: 0 0 0 9999px $shadow;
     }
 }
