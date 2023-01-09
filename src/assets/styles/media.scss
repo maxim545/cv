@@ -1,0 +1,45 @@
+
+@media (max-width: 767px) {
+    .wrapper {
+        margin: 0;
+    }
+
+    .burger {
+        display: block;
+        z-index: 99;
+    }
+
+    .burger.active  {
+        transform: rotate(90deg);
+        transition: 1130ms;
+    }
+
+    .nav__list {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        transform: translateX(100%);
+        min-width: 320px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px 0;
+        align-items: center;
+        padding: 150px 0;
+        overflow: auto;
+        z-index: 3;
+        background-color: $white;
+        transition: 0.6s ease-in-out;
+    }
+
+    .nav__list.active {
+        right: 0;
+        transform: translateX(0);
+        transition: 0.6s ease-in-out;
+    }
+
+    .shadow.active {
+        box-shadow: 0 0 0 9999px rgba(41, 41, 41, 0.6);
+    }
+}

@@ -2,14 +2,49 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CV</title>
+    <meta name="description" content="CV">
+    <link rel="icon" href="images/favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
 </head>
 
-<body id="body">
+<body class="body">
+    <div class="wrapper">
+        <header class="header">
+            <button class="burger" aria-label="Open menu">
+                <span class="burger__btn"></span>
+            </button>
+            <div class="shadow"></div>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="index.html#section-contacts">Contacts</a></li>
+                    <li class="nav__item"><a class="nav__link" href="index.html#section-skills">Skills</a></li>
+                    <li class="nav__item"><a class="nav__link" href="index.html#section-experience">Experience</a></li>
+                    <li class="nav__item"><a class="nav__link" href="index.html#section-education">Education</a></li>
+                    <li class="nav__item"><a class="nav__link" href="index.html#section-languages">Languages</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="info">
+            <div class="info__photo">
+                <img class="info__img" src="photo.jpg" alt="Photo">
+            </div>
+            <div class="info__name">
+                <h1 class="info__title">Maksim Karotkin</h1>
+                <h2 class="info__subtitle">Junior Front-End Developer</h2>
+            </div>
+        </div>
 
+        <footer class="footer">
+            <div class="footer__items">
+                2023
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>
