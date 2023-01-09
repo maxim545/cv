@@ -29,8 +29,8 @@
 
 .burger {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 20px;
+  right: 20px;
   display: none;
   width: 30px;
   height: 22px;
@@ -51,6 +51,7 @@
     background-color: $primary;
     z-index: 999;
   }
+
   &:before {
     content: "";
     position: absolute;
@@ -61,6 +62,7 @@
     height: 2px;
     background-color: $primary;
   }
+  
   &:after {
     content: "";
     position: absolute;
@@ -73,22 +75,24 @@
   }
 }
 
-.nav__list {
-  display: flex;
-  justify-content: space-between
-}
-
-.nav__link {
-  color: $black;
-  font-size: 18px;
-  text-decoration: none;
-  text-transform: uppercase;
-  &:hover {
-    color: $dark-hover;
+.nav {
+  &__list {
+    display: flex;
+    justify-content: space-between
+  }
+  
+  &__link {
+    color: $black;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+      color: $primary;
+      transition: 830ms;
+    }
   }
 }
 
-/* INFO */
 
 .info {
   display: grid;
@@ -118,12 +122,13 @@
   }
 }
 
-/* CONTENT */
+
 .content {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 0 30px
 }
+
 
 .section {
   &__title {
@@ -141,7 +146,6 @@
 }
 
 
-/* CONTACTS */
 .contacts {
   &__title {
     max-width: 300px;
@@ -152,17 +156,21 @@
     text-transform: uppercase;
     border-bottom: 2px solid $primary;
   }
+
   &__list {
     margin-top: 20px;
     margin-left: 15px;
   }
+
   &__item {
     margin-top: 10px;
   }
+
   &__name {
     display: block;
     font-weight: bold;
   }
+  
   &__link {
     text-decoration: none;
     color: #333;
@@ -221,33 +229,6 @@
 }
 
 
-.footer {
-  padding-top: 20px;
-
-  &__items {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 5px solid $primary;;
-    padding-top: 30px;
-  }
-  
-  &__img {
-    width: 80px;
-    height: 40px;
-  }
-  
-  &__link {
-    color: $black;
-    font-size: 20px;
-    text-decoration: none;
-    &:hover {
-      opacity: 0.75;
-    }
-  }
-}
-
-
 .slider {
   max-width: 1000px;
   position: relative;
@@ -276,7 +257,8 @@
   &__link {
     color: $white;
     &:hover {
-      color: $dark-hover;
+      transition: 630ms;
+      color: $primary;
     }
   }
   
@@ -305,6 +287,11 @@
     background-color: $shadow;
   }
 
+  &__prev-btn:hover, &__next-btn:hover {
+    transition: 630ms;
+    background-color: $dark;
+  }
+
 }
 
 .fade {
@@ -317,5 +304,18 @@
   to {opacity: 1}
 }
 
+
+.footer {
+  padding-top: 20px;
+
+  &__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 5px solid $primary;
+    padding-top: 30px;
+  }
+  
+}
 
 @import './assets/styles/media.scss';

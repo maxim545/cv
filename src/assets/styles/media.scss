@@ -2,7 +2,35 @@
 @media (max-width: 767px) {
     .wrapper {
         margin: 0;
+        padding: 20px;
     }
+
+    .info {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        justify-items: center;
+    }
+    .content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contacts {
+        &__title {
+          max-width: 100%;
+          line-height: 40px;
+          font-size: 20px;
+          font-weight: bold;
+          text-transform: uppercase;
+          border-bottom: 2px solid $primary;
+        }
+      
+        &__name {
+          display: inline;
+          padding-right: 20px;
+          font-weight: bold;
+        }
+      }
 
     .burger {
         display: block;
@@ -14,32 +42,44 @@
         transition: 1130ms;
     }
 
-    .nav__list {
-        position: fixed;
-        right: -100%;
-        top: 0;
-        transform: translateX(100%);
-        min-width: 320px;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 20px 0;
-        align-items: center;
-        padding: 150px 0;
-        overflow: auto;
-        z-index: 3;
-        background-color: $white;
-        transition: 0.6s ease-in-out;
-    }
+    .nav {
+        &__list {
+            position: fixed;
+            right: -100%;
+            top: 0;
+            transform: translateX(100%);
+            min-width: 320px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px 0;
+            align-items: center;
+            padding: 150px 0;
+            overflow: auto;
+            z-index: 3;
+            background-color: $white;
+            transition: 0.6s ease-in-out;
+        }
 
-    .nav__list.active {
-        right: 0;
-        transform: translateX(0);
-        transition: 0.6s ease-in-out;
+        &__list.active {
+            right: 0;
+            transform: translateX(0);
+            transition: 0.6s ease-in-out;
+        }
     }
 
     .shadow.active {
         box-shadow: 0 0 0 9999px $shadow;
+    }
+}
+
+@media (max-width: 480px) { 
+    .slider {
+        &__images {
+          width:  100%;
+          height: 200px;
+          object-fit: cover;
+        }
     }
 }
